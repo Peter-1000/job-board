@@ -1,0 +1,3632 @@
+{
+	"info": {
+		"_postman_id": "1c44f424-90a8-4e92-b642-573eb5fc91a9",
+		"name": "job-board",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27000922"
+	},
+	"item": [
+		{
+			"name": "jobs",
+			"item": [
+				{
+					"name": "get all jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}our-jobs?page=1",
+							"host": [
+								"{{url}}our-jobs"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "testzz",
+									"description": "string",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Prof",
+									"description": "sting",
+									"disabled": true
+								},
+								{
+									"key": "company_name",
+									"value": "Prof",
+									"description": "string",
+									"disabled": true
+								},
+								{
+									"key": "min_salary",
+									"value": "7000",
+									"description": "float",
+									"disabled": true
+								},
+								{
+									"key": "max_salary",
+									"value": "8000",
+									"description": "float",
+									"disabled": true
+								},
+								{
+									"key": "is_remote",
+									"value": "1",
+									"description": "in: 0,1",
+									"disabled": true
+								},
+								{
+									"key": "job_type",
+									"value": "1",
+									"description": "from: {{url}}jobs-enums",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"description": "from: {{url}}jobs-enums",
+									"disabled": true
+								},
+								{
+									"key": "published_at",
+									"value": "2025-03-27",
+									"description": "Y-m-d",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}our-jobs?page=1",
+									"host": [
+										"{{url}}our-jobs"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "testzz",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "description",
+											"value": "Prof",
+											"description": "sting",
+											"disabled": true
+										},
+										{
+											"key": "company_name",
+											"value": "Prof",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "min_salary",
+											"value": "7000",
+											"description": "float",
+											"disabled": true
+										},
+										{
+											"key": "max_salary",
+											"value": "8000",
+											"description": "float",
+											"disabled": true
+										},
+										{
+											"key": "is_remote",
+											"value": "1",
+											"description": "in: 0,1",
+											"disabled": true
+										},
+										{
+											"key": "job_type",
+											"value": "1",
+											"description": "from: {{url}}jobs-enums",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"description": "from: {{url}}jobs-enums",
+											"disabled": true
+										},
+										{
+											"key": "published_at",
+											"value": "2025-03-27",
+											"description": "Y-m-d",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Mar 2025 16:42:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"title\": \"Miss\",\n                \"description\": \"Id qui ipsam modi ut nesciunt. Commodi assumenda iure commodi consectetur adipisci. Possimus esse ducimus qui provident. Ut et et est voluptatem et asperiores a. Dolorum et dolor officia enim.\",\n                \"company_name\": \"Mrs.\",\n                \"salary\": \"7863.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"part-time\",\n                \"status\": \"archived\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 2,\n                        \"name\": \"Dr. Karley Herzog\",\n                        \"pivot\": {\n                            \"our_job_id\": 1,\n                            \"language_id\": 2\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 3,\n                        \"name\": \"Neal Gusikowski I\",\n                        \"pivot\": {\n                            \"our_job_id\": 1,\n                            \"category_id\": 3\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 3,\n                        \"name\": \"quibusdamMathias Cormier\",\n                        \"pivot\": {\n                            \"our_job_id\": 1,\n                            \"city_id\": 3\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Ms.\",\n                \"description\": \"Reiciendis ut incidunt in suscipit. Cum odit molestias vel sit architecto rerum dolor.\",\n                \"company_name\": \"Miss\",\n                \"salary\": \"2813.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"part-time\",\n                \"status\": \"archived\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 5,\n                        \"name\": \"Maynard O'Conner II\",\n                        \"pivot\": {\n                            \"our_job_id\": 2,\n                            \"language_id\": 5\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 3,\n                        \"name\": \"Neal Gusikowski I\",\n                        \"pivot\": {\n                            \"our_job_id\": 2,\n                            \"category_id\": 3\n                        }\n                    },\n                    {\n                        \"id\": 6,\n                        \"name\": \"Prof. Keyshawn Luettgen\",\n                        \"pivot\": {\n                            \"our_job_id\": 2,\n                            \"category_id\": 6\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 48,\n                        \"name\": \"explicaboMaximus Wiza\",\n                        \"pivot\": {\n                            \"our_job_id\": 2,\n                            \"city_id\": 48\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Dr.\",\n                \"description\": \"Fugiat qui qui voluptates nemo voluptate quas voluptatem. Deserunt minus facere nam error eos fugit. Fugiat qui molestiae facere nihil autem ullam. Rem sit illo voluptatibus eos suscipit.\",\n                \"company_name\": \"Dr.\",\n                \"salary\": \"3800.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"freelance\",\n                \"status\": \"published\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"Dr. Daron Baumbach\",\n                        \"pivot\": {\n                            \"our_job_id\": 3,\n                            \"language_id\": 4\n                        }\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"Maynard O'Conner II\",\n                        \"pivot\": {\n                            \"our_job_id\": 3,\n                            \"language_id\": 5\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"Ozella Veum\",\n                        \"pivot\": {\n                            \"our_job_id\": 3,\n                            \"category_id\": 4\n                        }\n                    },\n                    {\n                        \"id\": 7,\n                        \"name\": \"Katlyn Rolfson\",\n                        \"pivot\": {\n                            \"our_job_id\": 3,\n                            \"category_id\": 7\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 34,\n                        \"name\": \"oditThalia Beer\",\n                        \"pivot\": {\n                            \"our_job_id\": 3,\n                            \"city_id\": 34\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Prof.\",\n                \"description\": \"Qui voluptas amet blanditiis quas dolorem fugit. Quos aut iste occaecati est atque. Suscipit sed vel officiis temporibus vitae.\",\n                \"company_name\": \"Mrs.\",\n                \"salary\": \"8384.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"contract\",\n                \"status\": \"published\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Prof. Stewart Strosin II\",\n                        \"pivot\": {\n                            \"our_job_id\": 4,\n                            \"language_id\": 1\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"Dr. Karley Herzog\",\n                        \"pivot\": {\n                            \"our_job_id\": 4,\n                            \"language_id\": 2\n                        }\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"Dr. Daron Baumbach\",\n                        \"pivot\": {\n                            \"our_job_id\": 4,\n                            \"language_id\": 4\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 9,\n                        \"name\": \"Mr. Kaley Gleichner III\",\n                        \"pivot\": {\n                            \"our_job_id\": 4,\n                            \"category_id\": 9\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"Colby Wintheiser\",\n                        \"pivot\": {\n                            \"our_job_id\": 4,\n                            \"category_id\": 2\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 14,\n                        \"name\": \"doloresEliseo O'Conner Jr.\",\n                        \"pivot\": {\n                            \"our_job_id\": 4,\n                            \"city_id\": 14\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Dr.\",\n                \"description\": \"Voluptatem porro autem esse incidunt enim. Et tenetur ratione et laborum aperiam. Aliquid numquam beatae incidunt accusamus non ut. Voluptate aut similique fugiat qui modi debitis.\",\n                \"company_name\": \"Prof.\",\n                \"salary\": \"2460.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"contract\",\n                \"status\": \"published\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 2,\n                        \"name\": \"Dr. Karley Herzog\",\n                        \"pivot\": {\n                            \"our_job_id\": 5,\n                            \"language_id\": 2\n                        }\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"Dr. Daron Baumbach\",\n                        \"pivot\": {\n                            \"our_job_id\": 5,\n                            \"language_id\": 4\n                        }\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"Maynard O'Conner II\",\n                        \"pivot\": {\n                            \"our_job_id\": 5,\n                            \"language_id\": 5\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 2,\n                        \"name\": \"Colby Wintheiser\",\n                        \"pivot\": {\n                            \"our_job_id\": 5,\n                            \"category_id\": 2\n                        }\n                    },\n                    {\n                        \"id\": 1,\n                        \"name\": \"Trey Turcotte\",\n                        \"pivot\": {\n                            \"our_job_id\": 5,\n                            \"category_id\": 1\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 41,\n                        \"name\": \"quiMrs. Pearl Bernier\",\n                        \"pivot\": {\n                            \"our_job_id\": 5,\n                            \"city_id\": 41\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 6,\n                \"title\": \"Dr.\",\n                \"description\": \"Ipsam aspernatur totam ratione ut accusantium maxime voluptatem. Totam ipsa ut natus id quis. Amet est dolorem a.\",\n                \"company_name\": \"Prof.\",\n                \"salary\": \"3267.00\",\n                \"is_remote\": 1,\n                \"job_type\": \"part-time\",\n                \"status\": \"archived\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 3,\n                        \"name\": \"Rod Hudson\",\n                        \"pivot\": {\n                            \"our_job_id\": 6,\n                            \"language_id\": 3\n                        }\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"Maynard O'Conner II\",\n                        \"pivot\": {\n                            \"our_job_id\": 6,\n                            \"language_id\": 5\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 5,\n                        \"name\": \"Miss Lea Altenwerth\",\n                        \"pivot\": {\n                            \"our_job_id\": 6,\n                            \"category_id\": 5\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"Colby Wintheiser\",\n                        \"pivot\": {\n                            \"our_job_id\": 6,\n                            \"category_id\": 2\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 25,\n                        \"name\": \"utNick Bode\",\n                        \"pivot\": {\n                            \"our_job_id\": 6,\n                            \"city_id\": 25\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 7,\n                \"title\": \"Mrs.\",\n                \"description\": \"Omnis quo debitis dolore. Quidem harum explicabo unde ullam dolor.\",\n                \"company_name\": \"Prof.\",\n                \"salary\": \"4976.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"contract\",\n                \"status\": \"draft\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"Dr. Daron Baumbach\",\n                        \"pivot\": {\n                            \"our_job_id\": 7,\n                            \"language_id\": 4\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 7,\n                        \"name\": \"Katlyn Rolfson\",\n                        \"pivot\": {\n                            \"our_job_id\": 7,\n                            \"category_id\": 7\n                        }\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"Ozella Veum\",\n                        \"pivot\": {\n                            \"our_job_id\": 7,\n                            \"category_id\": 4\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 3,\n                        \"name\": \"quibusdamMathias Cormier\",\n                        \"pivot\": {\n                            \"our_job_id\": 7,\n                            \"city_id\": 3\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 8,\n                \"title\": \"Prof.\",\n                \"description\": \"Modi dolorum possimus excepturi qui. Nihil voluptas nisi voluptatibus et cum et. Incidunt laudantium aut rem recusandae quia ab suscipit.\",\n                \"company_name\": \"Dr.\",\n                \"salary\": \"2872.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"full-time\",\n                \"status\": \"published\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"Dr. Daron Baumbach\",\n                        \"pivot\": {\n                            \"our_job_id\": 8,\n                            \"language_id\": 4\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 2,\n                        \"name\": \"Colby Wintheiser\",\n                        \"pivot\": {\n                            \"our_job_id\": 8,\n                            \"category_id\": 2\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 24,\n                        \"name\": \"iureTobin Daniel DDS\",\n                        \"pivot\": {\n                            \"our_job_id\": 8,\n                            \"city_id\": 24\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 9,\n                \"title\": \"Dr.\",\n                \"description\": \"Deleniti atque commodi minima harum ut voluptates. Consequatur nihil ipsam ipsum voluptatibus aut. Autem omnis dolore eaque incidunt eaque sed. Voluptatem voluptatibus sunt rerum est.\",\n                \"company_name\": \"Mrs.\",\n                \"salary\": \"2837.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"full-time\",\n                \"status\": \"published\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Prof. Stewart Strosin II\",\n                        \"pivot\": {\n                            \"our_job_id\": 9,\n                            \"language_id\": 1\n                        }\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"Dr. Daron Baumbach\",\n                        \"pivot\": {\n                            \"our_job_id\": 9,\n                            \"language_id\": 4\n                        }\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"Maynard O'Conner II\",\n                        \"pivot\": {\n                            \"our_job_id\": 9,\n                            \"language_id\": 5\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 7,\n                        \"name\": \"Katlyn Rolfson\",\n                        \"pivot\": {\n                            \"our_job_id\": 9,\n                            \"category_id\": 7\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 21,\n                        \"name\": \"placeatMiss Andreanne O'Hara Jr.\",\n                        \"pivot\": {\n                            \"our_job_id\": 9,\n                            \"city_id\": 21\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 10,\n                \"title\": \"Prof.\",\n                \"description\": \"Tenetur neque et error nobis. Sunt sed quia voluptas possimus autem et excepturi. Quis eaque beatae nobis eaque.\",\n                \"company_name\": \"Mrs.\",\n                \"salary\": \"3133.00\",\n                \"is_remote\": 1,\n                \"job_type\": \"part-time\",\n                \"status\": \"published\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 2,\n                        \"name\": \"Dr. Karley Herzog\",\n                        \"pivot\": {\n                            \"our_job_id\": 10,\n                            \"language_id\": 2\n                        }\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"Maynard O'Conner II\",\n                        \"pivot\": {\n                            \"our_job_id\": 10,\n                            \"language_id\": 5\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 5,\n                        \"name\": \"Miss Lea Altenwerth\",\n                        \"pivot\": {\n                            \"our_job_id\": 10,\n                            \"category_id\": 5\n                        }\n                    },\n                    {\n                        \"id\": 8,\n                        \"name\": \"Jack Greenholt Sr.\",\n                        \"pivot\": {\n                            \"our_job_id\": 10,\n                            \"category_id\": 8\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 15,\n                        \"name\": \"laboreMr. Nasir Hayes DDS\",\n                        \"pivot\": {\n                            \"our_job_id\": 10,\n                            \"city_id\": 15\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 11,\n                \"title\": \"Dr.\",\n                \"description\": \"Est ea possimus dolorem. Qui distinctio ratione voluptatem. Facilis recusandae et voluptatem dicta nam qui pariatur qui. Est perferendis fugit sit eum neque autem rerum.\",\n                \"company_name\": \"Dr.\",\n                \"salary\": \"7086.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"contract\",\n                \"status\": \"draft\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 3,\n                        \"name\": \"Rod Hudson\",\n                        \"pivot\": {\n                            \"our_job_id\": 11,\n                            \"language_id\": 3\n                        }\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"Dr. Daron Baumbach\",\n                        \"pivot\": {\n                            \"our_job_id\": 11,\n                            \"language_id\": 4\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 2,\n                        \"name\": \"Colby Wintheiser\",\n                        \"pivot\": {\n                            \"our_job_id\": 11,\n                            \"category_id\": 2\n                        }\n                    },\n                    {\n                        \"id\": 9,\n                        \"name\": \"Mr. Kaley Gleichner III\",\n                        \"pivot\": {\n                            \"our_job_id\": 11,\n                            \"category_id\": 9\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 38,\n                        \"name\": \"voluptatumProf. Vladimir Ferry\",\n                        \"pivot\": {\n                            \"our_job_id\": 11,\n                            \"city_id\": 38\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 12,\n                \"title\": \"Ms.\",\n                \"description\": \"In accusamus vitae deserunt est repellendus. Placeat dicta animi voluptatem molestiae. Voluptates deserunt unde ea quis eos soluta. Blanditiis ut saepe quae amet vitae dolores id. Aut commodi ex cupiditate et et laudantium.\",\n                \"company_name\": \"Dr.\",\n                \"salary\": \"4415.00\",\n                \"is_remote\": 0,\n                \"job_type\": \"part-time\",\n                \"status\": \"draft\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Prof. Stewart Strosin II\",\n                        \"pivot\": {\n                            \"our_job_id\": 12,\n                            \"language_id\": 1\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"Dr. Karley Herzog\",\n                        \"pivot\": {\n                            \"our_job_id\": 12,\n                            \"language_id\": 2\n                        }\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"Dr. Daron Baumbach\",\n                        \"pivot\": {\n                            \"our_job_id\": 12,\n                            \"language_id\": 4\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 7,\n                        \"name\": \"Katlyn Rolfson\",\n                        \"pivot\": {\n                            \"our_job_id\": 12,\n                            \"category_id\": 7\n                        }\n                    },\n                    {\n                        \"id\": 1,\n                        \"name\": \"Trey Turcotte\",\n                        \"pivot\": {\n                            \"our_job_id\": 12,\n                            \"category_id\": 1\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"liberoDr. Tyrel Rohan DDS\",\n                        \"pivot\": {\n                            \"our_job_id\": 12,\n                            \"city_id\": 1\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 13,\n                \"title\": \"Prof.\",\n                \"description\": \"Ullam temporibus magni exercitationem ex. Aut cupiditate eum velit exercitationem est vel. Sapiente tempore maxime recusandae deleniti incidunt dolor sint.\",\n                \"company_name\": \"Prof.\",\n                \"salary\": \"1673.00\",\n                \"is_remote\": 1,\n                \"job_type\": \"freelance\",\n                \"status\": \"published\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Prof. Stewart Strosin II\",\n                        \"pivot\": {\n                            \"our_job_id\": 13,\n                            \"language_id\": 1\n                        }\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"Maynard O'Conner II\",\n                        \"pivot\": {\n                            \"our_job_id\": 13,\n                            \"language_id\": 5\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 6,\n                        \"name\": \"Prof. Keyshawn Luettgen\",\n                        \"pivot\": {\n                            \"our_job_id\": 13,\n                            \"category_id\": 6\n                        }\n                    },\n                    {\n                        \"id\": 7,\n                        \"name\": \"Katlyn Rolfson\",\n                        \"pivot\": {\n                            \"our_job_id\": 13,\n                            \"category_id\": 7\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 38,\n                        \"name\": \"voluptatumProf. Vladimir Ferry\",\n                        \"pivot\": {\n                            \"our_job_id\": 13,\n                            \"city_id\": 38\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 14,\n                \"title\": \"Ms.\",\n                \"description\": \"Ducimus aut eius dignissimos rerum vel. Esse nihil nihil vero temporibus minus. Veniam aut qui tempora temporibus qui. Pariatur nam magni rem tempore nobis reprehenderit nostrum.\",\n                \"company_name\": \"Mr.\",\n                \"salary\": \"9366.00\",\n                \"is_remote\": 1,\n                \"job_type\": \"contract\",\n                \"status\": \"archived\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Prof. Stewart Strosin II\",\n                        \"pivot\": {\n                            \"our_job_id\": 14,\n                            \"language_id\": 1\n                        }\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"Dr. Karley Herzog\",\n                        \"pivot\": {\n                            \"our_job_id\": 14,\n                            \"language_id\": 2\n                        }\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"Rod Hudson\",\n                        \"pivot\": {\n                            \"our_job_id\": 14,\n                            \"language_id\": 3\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"Ozella Veum\",\n                        \"pivot\": {\n                            \"our_job_id\": 14,\n                            \"category_id\": 4\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 12,\n                        \"name\": \"voluptatesJaylen Roob\",\n                        \"pivot\": {\n                            \"our_job_id\": 14,\n                            \"city_id\": 12\n                        }\n                    }\n                ]\n            },\n            {\n                \"id\": 15,\n                \"title\": \"Prof.\",\n                \"description\": \"Occaecati provident eveniet repellat ex explicabo nihil et. Quisquam dolores consequuntur modi qui debitis fugit. Rerum repudiandae voluptatibus quia ea et qui rerum. Quidem autem tenetur cum.\",\n                \"company_name\": \"Mr.\",\n                \"salary\": \"1836.00\",\n                \"is_remote\": 1,\n                \"job_type\": \"part-time\",\n                \"status\": \"published\",\n                \"published_at\": \"2025-03-28 16:40:44\",\n                \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n                \"languages\": [\n                    {\n                        \"id\": 3,\n                        \"name\": \"Rod Hudson\",\n                        \"pivot\": {\n                            \"our_job_id\": 15,\n                            \"language_id\": 3\n                        }\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"Maynard O'Conner II\",\n                        \"pivot\": {\n                            \"our_job_id\": 15,\n                            \"language_id\": 5\n                        }\n                    }\n                ],\n                \"categories\": [\n                    {\n                        \"id\": 10,\n                        \"name\": \"Samson Breitenberg\",\n                        \"pivot\": {\n                            \"our_job_id\": 15,\n                            \"category_id\": 10\n                        }\n                    }\n                ],\n                \"cities\": [\n                    {\n                        \"id\": 3,\n                        \"name\": \"quibusdamMathias Cormier\",\n                        \"pivot\": {\n                            \"our_job_id\": 15,\n                            \"city_id\": 3\n                        }\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/our-jobs?page=1\",\n        \"from\": 1,\n        \"last_page\": 7,\n        \"last_page_url\": \"http://localhost:8000/api/our-jobs?page=7\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/our-jobs?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:8000/api/our-jobs?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/our-jobs?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/our-jobs?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/our-jobs?page=5\",\n                \"label\": \"5\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/our-jobs?page=6\",\n                \"label\": \"6\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/our-jobs?page=7\",\n                \"label\": \"7\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/our-jobs?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://localhost:8000/api/our-jobs?page=2\",\n        \"path\": \"http://localhost:8000/api/our-jobs\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 15,\n        \"total\": 100\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "job attributes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}job-attributes",
+							"host": [
+								"{{url}}job-attributes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}job-attributes",
+									"host": [
+										"{{url}}job-attributes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Mar 2025 16:42:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"job_types\": [\n            \"part-time\",\n            \"freelance\",\n            \"contract\",\n            \"full-time\"\n        ],\n        \"job_status\": [\n            \"archived\",\n            \"published\",\n            \"draft\"\n        ],\n        \"salary_range\": {\n            \"min\": 1067,\n            \"max\": 9927\n        },\n        \"is_remote\": {\n            \"false\": 0,\n            \"true\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test",
+									"description": "required | string | min:2 | max:255 | unique ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test desc",
+									"description": "required | string | min:5 | max:500",
+									"type": "text"
+								},
+								{
+									"key": "company_name",
+									"value": "company",
+									"description": "required | string | min:2 | max:255",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "5000",
+									"description": "required | numeric | min:0 | max:999999,99",
+									"type": "text"
+								},
+								{
+									"key": "is_remote",
+									"value": "1",
+									"description": "required | in: 0,1",
+									"type": "text"
+								},
+								{
+									"key": "job_type",
+									"value": "full-time",
+									"description": "required | string",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"description": "required | string",
+									"type": "text"
+								},
+								{
+									"key": "languages[]",
+									"value": "1",
+									"description": "from: {{url}}languages",
+									"type": "text"
+								},
+								{
+									"key": "languages[]",
+									"value": "3",
+									"description": "from: {{url}}languages",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "1",
+									"description": "from: {{url}}categories",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "2",
+									"description": "from: {{url}}categories",
+									"type": "text"
+								},
+								{
+									"key": "citites[]",
+									"value": "1",
+									"description": "from: {{url}}citites",
+									"type": "text"
+								},
+								{
+									"key": "cities[]",
+									"value": "5",
+									"description": "from: {{url}}citites",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}our-jobs",
+							"host": [
+								"{{url}}our-jobs"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "test",
+											"description": "required | string | min:2 | max:255 | unique ",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "test desc",
+											"description": "required | string | min:5 | max:500",
+											"type": "text"
+										},
+										{
+											"key": "company_name",
+											"value": "company",
+											"description": "required | string | min:2 | max:255",
+											"type": "text"
+										},
+										{
+											"key": "salary",
+											"value": "5000",
+											"description": "required | numeric | min:0 | max:999999,99",
+											"type": "text"
+										},
+										{
+											"key": "is_remote",
+											"value": "1",
+											"description": "required | in: 0,1",
+											"type": "text"
+										},
+										{
+											"key": "job_type",
+											"value": "full-time",
+											"description": "required | string",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"description": "required | string",
+											"type": "text"
+										},
+										{
+											"key": "languages[]",
+											"value": "1",
+											"description": "from: {{url}}languages",
+											"type": "text"
+										},
+										{
+											"key": "languages[]",
+											"value": "3",
+											"description": "from: {{url}}languages",
+											"type": "text"
+										},
+										{
+											"key": "categories[]",
+											"value": "1",
+											"description": "from: {{url}}categories",
+											"type": "text"
+										},
+										{
+											"key": "categories[]",
+											"value": "2",
+											"description": "from: {{url}}categories",
+											"type": "text"
+										},
+										{
+											"key": "citites[]",
+											"value": "1",
+											"description": "from: {{url}}citites",
+											"type": "text"
+										},
+										{
+											"key": "cities[]",
+											"value": "5",
+											"description": "from: {{url}}citites",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}our-jobs",
+									"host": [
+										"{{url}}our-jobs"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Mar 2025 16:42:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 101,\n        \"title\": \"test\",\n        \"description\": \"test desc\",\n        \"company_name\": \"company\",\n        \"salary\": \"5000.00\",\n        \"is_remote\": 1,\n        \"job_type\": \"full-time\",\n        \"status\": \"active\",\n        \"published_at\": null,\n        \"created_at\": \"2025-03-28T16:42:59.000000Z\",\n        \"updated_at\": \"2025-03-28T16:42:59.000000Z\",\n        \"languages\": [\n            {\n                \"id\": 1,\n                \"name\": \"Prof. Stewart Strosin II\",\n                \"pivot\": {\n                    \"our_job_id\": 101,\n                    \"language_id\": 1\n                }\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Rod Hudson\",\n                \"pivot\": {\n                    \"our_job_id\": 101,\n                    \"language_id\": 3\n                }\n            }\n        ],\n        \"categories\": [\n            {\n                \"id\": 1,\n                \"name\": \"Trey Turcotte\",\n                \"pivot\": {\n                    \"our_job_id\": 101,\n                    \"category_id\": 1\n                }\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Colby Wintheiser\",\n                \"pivot\": {\n                    \"our_job_id\": 101,\n                    \"category_id\": 2\n                }\n            }\n        ],\n        \"cities\": [\n            {\n                \"id\": 5,\n                \"name\": \"cumqueKeanu Langworth II\",\n                \"pivot\": {\n                    \"our_job_id\": 101,\n                    \"city_id\": 5\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show job",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}our-jobs/1",
+							"host": [
+								"{{url}}our-jobs"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}our-jobs/1",
+									"host": [
+										"{{url}}our-jobs"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Mar 2025 16:43:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Miss\",\n        \"description\": \"Id qui ipsam modi ut nesciunt. Commodi assumenda iure commodi consectetur adipisci. Possimus esse ducimus qui provident. Ut et et est voluptatem et asperiores a. Dolorum et dolor officia enim.\",\n        \"company_name\": \"Mrs.\",\n        \"salary\": \"7863.00\",\n        \"is_remote\": 0,\n        \"job_type\": \"part-time\",\n        \"status\": \"archived\",\n        \"published_at\": \"2025-03-28 16:40:44\",\n        \"created_at\": \"2025-03-28T16:40:44.000000Z\",\n        \"updated_at\": \"2025-03-28T16:40:44.000000Z\",\n        \"languages\": [\n            {\n                \"id\": 2,\n                \"name\": \"Dr. Karley Herzog\",\n                \"pivot\": {\n                    \"our_job_id\": 1,\n                    \"language_id\": 2\n                }\n            }\n        ],\n        \"categories\": [\n            {\n                \"id\": 3,\n                \"name\": \"Neal Gusikowski I\",\n                \"pivot\": {\n                    \"our_job_id\": 1,\n                    \"category_id\": 3\n                }\n            }\n        ],\n        \"cities\": [\n            {\n                \"id\": 3,\n                \"name\": \"quibusdamMathias Cormier\",\n                \"pivot\": {\n                    \"our_job_id\": 1,\n                    \"city_id\": 3\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update job",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Software Developer",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "updated desc",
+									"type": "text"
+								},
+								{
+									"key": "company_name",
+									"value": "company",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "5000",
+									"type": "text"
+								},
+								{
+									"key": "is_remote",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "job_type",
+									"value": "full-time",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								},
+								{
+									"key": "languages[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "languages[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "categories[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "cities[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cities[]",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}our-jobs/1",
+							"host": [
+								"{{url}}our-jobs"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "Software Developer",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "updated desc",
+											"type": "text"
+										},
+										{
+											"key": "company_name",
+											"value": "company",
+											"type": "text"
+										},
+										{
+											"key": "salary_min",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "salary_max",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "is_remote",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "job_type",
+											"value": "full-time",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "active",
+											"type": "text"
+										},
+										{
+											"key": "languages[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "languages[]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "categories[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "categories[]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "cities[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "cities[]",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}our-jobs/1",
+									"host": [
+										"{{url}}our-jobs"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Mar 2025 16:21:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Software Developer\",\n        \"description\": \"updated desc\",\n        \"company_name\": \"company\",\n        \"salary_min\": 500,\n        \"salary_max\": 1000,\n        \"is_remote\": true,\n        \"job_type\": \"full-time\",\n        \"status\": \"active\",\n        \"published_at\": null,\n        \"created_at\": \"2025-03-28T16:17:13.000000Z\",\n        \"updated_at\": \"2025-03-28T16:21:05.000000Z\",\n        \"languages\": [\n            {\n                \"id\": 2,\n                \"name\": \"Arvilla Miller\",\n                \"pivot\": {\n                    \"our_job_id\": 1,\n                    \"language_id\": 2\n                }\n            },\n            {\n                \"id\": 1,\n                \"name\": \"Hilario Leffler\",\n                \"pivot\": {\n                    \"our_job_id\": 1,\n                    \"language_id\": 1\n                }\n            }\n        ],\n        \"categories\": [\n            {\n                \"id\": 2,\n                \"name\": \"Mrs. Angelita Schowalter Sr.\",\n                \"pivot\": {\n                    \"our_job_id\": 1,\n                    \"category_id\": 2\n                }\n            },\n            {\n                \"id\": 1,\n                \"name\": \"Khalid Murphy\",\n                \"pivot\": {\n                    \"our_job_id\": 1,\n                    \"category_id\": 1\n                }\n            }\n        ],\n        \"cities\": [\n            {\n                \"id\": 1,\n                \"name\": \"distinctioMr. Buford Mante V\",\n                \"pivot\": {\n                    \"our_job_id\": 1,\n                    \"city_id\": 1\n                }\n            },\n            {\n                \"id\": 2,\n                \"name\": \"magniReta Armstrong Sr.\",\n                \"pivot\": {\n                    \"our_job_id\": 1,\n                    \"city_id\": 2\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete job",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}our-jobs/1",
+							"host": [
+								"{{url}}our-jobs"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}our-jobs/1",
+									"host": [
+										"{{url}}our-jobs"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:08:16 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "languages",
+			"item": [
+				{
+					"name": "get all languages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}languages?page=1",
+							"host": [
+								"{{url}}languages"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "php",
+									"description": "string",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}languages?page=1",
+									"host": [
+										"{{url}}languages"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Franco",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:43:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Franco Zemlak I\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Milford Wiegand IV\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Gideon Konopelski\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Mr. Santos Lind\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Prof. Nicholas Treutel\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Keyon Toy V\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Harmon Ruecker I\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Prof. Hayden Swaniawski MD\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Keira Renner III\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Newton Koss\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Nat Bechtelar\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Mr. Seth Metz Sr.\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Prof. Elisabeth O'Keefe\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Mrs. Leda Sauer V\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Erin Cremin\",\n            \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n            \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create language",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "php",
+									"description": "required | string | min:2 | max:255 | unique",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}languages",
+							"host": [
+								"{{url}}languages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "php",
+											"description": "required | string | min:2 | max:255 | unique",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}languages",
+									"host": [
+										"{{url}}languages"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:43:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 10001,\n        \"name\": \"php\",\n        \"created_at\": \"2025-03-27T04:43:03.000000Z\",\n        \"updated_at\": \"2025-03-27T04:43:03.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "validation errors",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "php",
+											"description": "required | string | min:2 | max:255 | unique",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}languages",
+									"host": [
+										"{{url}}languages"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:42:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The name field is required.\",\n    \"errors\": {\n        \"name\": [\n            \"The name field is required.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show language",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}languages/1",
+							"host": [
+								"{{url}}languages"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}languages/1",
+									"host": [
+										"{{url}}languages"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:43:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Franco Zemlak I\",\n        \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n        \"updated_at\": \"2025-03-27T04:39:57.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}languages/0",
+									"host": [
+										"{{url}}languages"
+									],
+									"path": [
+										"0"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:44:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"not found\",\n    \"message\": \"No query results for model [App\\\\Models\\\\Language] 0\",\n    \"errors\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "update language",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "JavaScript",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}languages/1",
+							"host": [
+								"{{url}}languages"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "unique validation error",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "php",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}languages/1",
+									"host": [
+										"{{url}}languages"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:45:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The name has already been taken.\",\n    \"errors\": {\n        \"name\": [\n            \"The name has already been taken.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "not found",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "JavaScript",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}languages/0",
+									"host": [
+										"{{url}}languages"
+									],
+									"path": [
+										"0"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:45:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"not found\",\n    \"message\": \"No query results for model [App\\\\Models\\\\Language] 0\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "JavaScript",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}languages/1",
+									"host": [
+										"{{url}}languages"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:46:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"JavaScript\",\n        \"created_at\": \"2025-03-27T04:39:57.000000Z\",\n        \"updated_at\": \"2025-03-27T04:46:04.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete language",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}languages/2",
+							"host": [
+								"{{url}}languages"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}languages/0",
+									"host": [
+										"{{url}}languages"
+									],
+									"path": [
+										"0"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:47:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"not found\",\n    \"message\": \"No query results for model [App\\\\Models\\\\Language] 0\",\n    \"errors\": null\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}languages/2",
+									"host": [
+										"{{url}}languages"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 04:47:49 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "cities",
+			"item": [
+				{
+					"name": "get all cities",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}cities?page=1",
+							"host": [
+								"{{url}}cities"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "deseruntRuthe",
+									"description": "string",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sucess",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}cities?page=1",
+									"host": [
+										"{{url}}cities"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "deseruntRuthe",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:34:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"state_id\": 5,\n                \"name\": \"deseruntRuthe Sporer IV\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 5,\n                    \"name\": \"quamDr. Daryl Kreiger III\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 2,\n                \"state_id\": 7,\n                \"name\": \"inventoreMr. Peyton Considine IV\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 7,\n                    \"name\": \"quosProf. Wallace Crona MD\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 3,\n                \"state_id\": 17,\n                \"name\": \"nesciuntBartholome Simonis\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 17,\n                    \"name\": \"atTyra Beer MD\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 4,\n                \"state_id\": 12,\n                \"name\": \"solutaProf. Viola Heller\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 12,\n                    \"name\": \"etProf. Tiffany Barrows III\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 5,\n                \"state_id\": 16,\n                \"name\": \"etSarai Davis\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 16,\n                    \"name\": \"asperioresMiss Sandra Stracke Sr.\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 6,\n                \"state_id\": 18,\n                \"name\": \"doloremMs. Pat Pollich\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 18,\n                    \"name\": \"aperiamAhmad Wyman\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 7,\n                \"state_id\": 5,\n                \"name\": \"animiElvera Nader\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 5,\n                    \"name\": \"quamDr. Daryl Kreiger III\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 8,\n                \"state_id\": 16,\n                \"name\": \"vitaeMiss Eden Turcotte MD\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 16,\n                    \"name\": \"asperioresMiss Sandra Stracke Sr.\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 9,\n                \"state_id\": 15,\n                \"name\": \"utClovis Kling\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 15,\n                    \"name\": \"quiShakira Corwin Sr.\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 10,\n                \"state_id\": 14,\n                \"name\": \"inFern Kilback\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 14,\n                    \"name\": \"quisLeone Lindgren\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 11,\n                \"state_id\": 3,\n                \"name\": \"expeditaMr. Stanton Lesch\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 3,\n                    \"name\": \"quiMrs. Elvera Heaney MD\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 12,\n                \"state_id\": 13,\n                \"name\": \"quiProf. Jeff Stroman\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 13,\n                    \"name\": \"corruptiHailie Waelchi\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 13,\n                \"state_id\": 3,\n                \"name\": \"etDemetrius Bradtke\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 3,\n                    \"name\": \"quiMrs. Elvera Heaney MD\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 14,\n                \"state_id\": 1,\n                \"name\": \"ipsamMacey Hintz\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 1,\n                    \"name\": \"molestiaeDayne Ward\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 15,\n                \"state_id\": 7,\n                \"name\": \"temporaNeil Bradtke\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"state\": {\n                    \"id\": 7,\n                    \"name\": \"quosProf. Wallace Crona MD\",\n                    \"code\": null\n                }\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/cities?page=1\",\n        \"from\": 1,\n        \"last_page\": 4,\n        \"last_page_url\": \"http://localhost:8000/api/cities?page=4\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/cities?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:8000/api/cities?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/cities?page=3\",\n                \"label\": \"3\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/cities?page=4\",\n                \"label\": \"4\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/cities?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://localhost:8000/api/cities?page=2\",\n        \"path\": \"http://localhost:8000/api/cities\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 15,\n        \"total\": 51\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create cities",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "city 2",
+									"description": "required | string | min:2 | max:255 | unique",
+									"type": "text"
+								},
+								{
+									"key": "state_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}cities",
+							"host": [
+								"{{url}}cities"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "city 2",
+											"description": "required | string | min:2 | max:255 | unique",
+											"type": "text"
+										},
+										{
+											"key": "state_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}cities",
+									"host": [
+										"{{url}}cities"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:35:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 53,\n        \"state_id\": 1,\n        \"name\": \"city 2\",\n        \"created_at\": \"2025-03-27T15:35:59.000000Z\",\n        \"updated_at\": \"2025-03-27T15:35:59.000000Z\",\n        \"state\": {\n            \"id\": 1,\n            \"name\": \"molestiaeDayne Ward\",\n            \"code\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show cities",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}cities/1",
+							"host": [
+								"{{url}}cities"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "sucess",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}cities/1",
+									"host": [
+										"{{url}}cities"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:36:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"state_id\": 5,\n        \"name\": \"deseruntRuthe Sporer IV\",\n        \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"state\": {\n            \"id\": 5,\n            \"name\": \"quamDr. Daryl Kreiger III\",\n            \"code\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update cities",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "city name",
+									"type": "text"
+								},
+								{
+									"key": "state_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}cities/1",
+							"host": [
+								"{{url}}cities"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "city name",
+											"type": "text"
+										},
+										{
+											"key": "state_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}cities/1",
+									"host": [
+										"{{url}}cities"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:38:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"state_id\": 1,\n        \"name\": \"city name\",\n        \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"updated_at\": \"2025-03-27T15:37:47.000000Z\",\n        \"state\": {\n            \"id\": 1,\n            \"name\": \"molestiaeDayne Ward\",\n            \"code\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete cities",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}cities/2",
+							"host": [
+								"{{url}}cities"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}cities/2",
+									"host": [
+										"{{url}}cities"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:39:34 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "countries",
+			"item": [
+				{
+					"name": "get all countries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}countries?page=1",
+							"host": [
+								"{{url}}countries"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "autDorthy",
+									"description": "string",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "cod",
+									"description": "string | max: 3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}countries?page=1",
+									"host": [
+										"{{url}}countries"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "name",
+											"value": "autDorthy",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "code",
+											"value": "cod",
+											"description": "string | max: 3",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:42:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"name\": \"autDorthy Pfeffer\",\n                \"code\": \"cod\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"voluptatemSophie Ernser\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"totamAshlee Thompson\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"hicProf. Jazmyne Weimann MD\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"etSantiago Jacobson\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/countries?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/countries?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/countries?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/countries\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 5,\n        \"total\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create countries",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "countries1",
+									"description": "required | string | min:2 | max:255 | unique",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "co1",
+									"description": "nullable | length: 3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}countries",
+							"host": [
+								"{{url}}countries"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "countries1",
+											"description": "required | string | min:2 | max:255 | unique",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "co1",
+											"description": "nullable | digits: 3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}countries",
+									"host": [
+										"{{url}}countries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:44:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"201\",\n    \"data\": {\n        \"name\": \"countries1\",\n        \"code\": \"co1\",\n        \"updated_at\": \"2025-03-27T15:44:31.000000Z\",\n        \"created_at\": \"2025-03-27T15:44:31.000000Z\",\n        \"id\": 7\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show countries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}countries/1",
+							"host": [
+								"{{url}}countries"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}countries/1",
+									"host": [
+										"{{url}}countries"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:44:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"autDorthy Pfeffer\",\n        \"code\": \"cod\",\n        \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "countries",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "country",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "egy",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}countries/1",
+							"host": [
+								"{{url}}countries"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "country",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "egy",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}countries/1",
+									"host": [
+										"{{url}}countries"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:45:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"country\",\n        \"code\": \"egy\",\n        \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"updated_at\": \"2025-03-27T15:45:42.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete countries",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}countries/2",
+							"host": [
+								"{{url}}countries"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}countries/2",
+									"host": [
+										"{{url}}countries"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:46:01 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "states",
+			"item": [
+				{
+					"name": "get all states",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}states?page=1",
+							"host": [
+								"{{url}}states"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "molestiaeDayne",
+									"description": "string",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "123a",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}states?page=1",
+									"host": [
+										"{{url}}states"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "name",
+											"value": "molestiaeDayne",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "code",
+											"value": "123a",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:48:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"country_id\": 4,\n                \"name\": \"molestiaeDayne Ward\",\n                \"code\": \"123a\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 4,\n                    \"name\": \"hicProf. Jazmyne Weimann MD\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 2,\n                \"country_id\": 4,\n                \"name\": \"eligendiKraig Brown\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 4,\n                    \"name\": \"hicProf. Jazmyne Weimann MD\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 3,\n                \"country_id\": 3,\n                \"name\": \"quiMrs. Elvera Heaney MD\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 3,\n                    \"name\": \"totamAshlee Thompson\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 4,\n                \"country_id\": 3,\n                \"name\": \"reiciendisAdelbert Effertz\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 3,\n                    \"name\": \"totamAshlee Thompson\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 5,\n                \"country_id\": 4,\n                \"name\": \"quamDr. Daryl Kreiger III\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 4,\n                    \"name\": \"hicProf. Jazmyne Weimann MD\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 6,\n                \"country_id\": 4,\n                \"name\": \"reiciendisMr. Joaquin Witting\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 4,\n                    \"name\": \"hicProf. Jazmyne Weimann MD\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 7,\n                \"country_id\": 5,\n                \"name\": \"quosProf. Wallace Crona MD\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 5,\n                    \"name\": \"etSantiago Jacobson\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 8,\n                \"country_id\": 3,\n                \"name\": \"nisiBrandyn Dooley\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 3,\n                    \"name\": \"totamAshlee Thompson\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 9,\n                \"country_id\": 2,\n                \"name\": \"sequiTerrence Armstrong DVM\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": null\n            },\n            {\n                \"id\": 10,\n                \"country_id\": 3,\n                \"name\": \"estGerson Wolf\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 3,\n                    \"name\": \"totamAshlee Thompson\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 11,\n                \"country_id\": 1,\n                \"name\": \"isteCreola Leuschke\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 1,\n                    \"name\": \"country\",\n                    \"code\": \"egy\"\n                }\n            },\n            {\n                \"id\": 12,\n                \"country_id\": 4,\n                \"name\": \"etProf. Tiffany Barrows III\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 4,\n                    \"name\": \"hicProf. Jazmyne Weimann MD\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 13,\n                \"country_id\": 3,\n                \"name\": \"corruptiHailie Waelchi\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 3,\n                    \"name\": \"totamAshlee Thompson\",\n                    \"code\": null\n                }\n            },\n            {\n                \"id\": 14,\n                \"country_id\": 2,\n                \"name\": \"quisLeone Lindgren\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": null\n            },\n            {\n                \"id\": 15,\n                \"country_id\": 1,\n                \"name\": \"quiShakira Corwin Sr.\",\n                \"code\": null,\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"country\": {\n                    \"id\": 1,\n                    \"name\": \"country\",\n                    \"code\": \"egy\"\n                }\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/states?page=1\",\n        \"from\": 1,\n        \"last_page\": 2,\n        \"last_page_url\": \"http://localhost:8000/api/states?page=2\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/states?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:8000/api/states?page=2\",\n                \"label\": \"2\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/states?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": \"http://localhost:8000/api/states?page=2\",\n        \"path\": \"http://localhost:8000/api/states\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 15,\n        \"total\": 20\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create states",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "state",
+									"description": "required | string | min:2 | max:255 | unique",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"description": "from: {{url}}countries",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "state",
+									"description": "nullable | length: 3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}states",
+							"host": [
+								"{{url}}states"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "state",
+											"description": "required | string | min:2 | max:255 | unique",
+											"type": "text"
+										},
+										{
+											"key": "country_id",
+											"value": "1",
+											"description": "from: {{url}}countries",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "state",
+											"description": "nullable | length: 3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}states",
+									"host": [
+										"{{url}}states"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:50:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"201\",\n    \"data\": {\n        \"name\": \"state\",\n        \"code\": \"state\",\n        \"country_id\": 1,\n        \"updated_at\": \"2025-03-27T15:50:18.000000Z\",\n        \"created_at\": \"2025-03-27T15:50:18.000000Z\",\n        \"id\": 23\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show states",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}states/1",
+							"host": [
+								"{{url}}states"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}states/1",
+									"host": [
+										"{{url}}states"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:50:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"country_id\": 4,\n        \"name\": \"molestiaeDayne Ward\",\n        \"code\": \"123a\",\n        \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"updated_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"country\": {\n            \"id\": 4,\n            \"name\": \"hicProf. Jazmyne Weimann MD\",\n            \"code\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update states",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "state name",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "code",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}states/1",
+							"host": [
+								"{{url}}states"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "state name",
+											"type": "text"
+										},
+										{
+											"key": "country_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "code",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}states/1",
+									"host": [
+										"{{url}}states"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:51:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"country_id\": 1,\n        \"name\": \"state name\",\n        \"code\": \"code\",\n        \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"updated_at\": \"2025-03-27T15:51:12.000000Z\",\n        \"country\": {\n            \"id\": 4,\n            \"name\": \"hicProf. Jazmyne Weimann MD\",\n            \"code\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete cities",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}cities/8",
+							"host": [
+								"{{url}}cities"
+							],
+							"path": [
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}cities/8",
+									"host": [
+										"{{url}}cities"
+									],
+									"path": [
+										"8"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 15:51:47 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "get all categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}categories?page=1",
+							"host": [
+								"{{url}}categories"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Jennyfer",
+									"description": "string",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}categories?page=1",
+									"host": [
+										"{{url}}categories"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Jennyfer",
+											"description": "string",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 16:07:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"name\": \"Jennyfer Metz\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Alexandro Schmeler\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Zora Harvey\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Jodie Ebert I\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Prof. Jewell Mills IV\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Eleazar Mraz\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 7,\n                \"name\": \"Deja Hansen\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"Lorenza Leannon\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Gabriel Kiehn\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Prof. Pascale Conn I\",\n                \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n                \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/categories?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/categories?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/categories?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/categories\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 10,\n        \"total\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create categories",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "front",
+									"description": "required | string | min:2 | max:255 | unique",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}categories",
+							"host": [
+								"{{url}}categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "front",
+											"description": "required | string | min:2 | max:255 | unique",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}categories",
+									"host": [
+										"{{url}}categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 16:09:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"name\": \"front\",\n        \"updated_at\": \"2025-03-27T16:09:28.000000Z\",\n        \"created_at\": \"2025-03-27T16:09:28.000000Z\",\n        \"id\": 11\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}categories/1",
+							"host": [
+								"{{url}}categories"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}categories/1",
+									"host": [
+										"{{url}}categories"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 16:10:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Jennyfer Metz\",\n        \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"updated_at\": \"2025-03-27T13:13:20.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update categories",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Backend",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}categories/1",
+							"host": [
+								"{{url}}categories"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Backend",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}categories/1",
+									"host": [
+										"{{url}}categories"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 16:10:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Backend\",\n        \"created_at\": \"2025-03-27T13:13:20.000000Z\",\n        \"updated_at\": \"2025-03-27T16:10:59.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete categories",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}categories/2",
+							"host": [
+								"{{url}}categories"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}categories/2",
+									"host": [
+										"{{url}}categories"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.18"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Mar 2025 16:11:17 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
