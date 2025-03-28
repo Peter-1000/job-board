@@ -8,18 +8,11 @@
     git clone https://github.com/Peter-1000/job-board
     cd project
     cp .env.example .env
-
-you may use docker compose or docker-compose based on the version you have
-I'm using some ports, if the ports are allocated already at your machine
-please change them at docker-compose.yml
-
-```
-composer install 
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
-php artisan serve --host=0.0.0.0 --port=8000
-```
+    composer install 
+    php artisan key:generate
+    php artisan migrate
+    php artisan db:seed
+    php artisan serve --host=0.0.0.0 --port=8000
 
 you may access the website at
 
